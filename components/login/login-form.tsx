@@ -10,6 +10,7 @@ import { toast } from 'react-toastify';
 import { useRouter } from 'next/router';
 import useLocalStorage from '../utils/use-localstorage';
 
+const serverURL = 'https://my-food-db-backend.herokuapp.com/'
 
 const validationSchema = yup.object({
   username: yup
@@ -35,7 +36,7 @@ const LoginForm = () => {
     validationSchema: validationSchema,
     onSubmit: async (values) => {
       try {
-        const response = await toast.promise(axios.post('http://localhost:3001/login', values),
+        const response = await toast.promise(axios.post(`${serverURL}login`, values),
           {
 	          pending: "We're logging you in...",
             success: "Success! You're in!",
