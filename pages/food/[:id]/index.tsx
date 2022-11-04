@@ -6,7 +6,7 @@ import NavBar from '../../../components/utils/navbar';
 import useLocalStorage from '../../../components/utils/use-localstorage';
 import { FoodEntry } from '../../../types';
 
-const serverURL = 'http://localhost:3001/'
+const serverURL = 'https://my-food-db-backend.herokuapp.com:22276/'
 
 const Food = () => {
   const [food, setFood] = useState<FoodEntry | null>(null);
