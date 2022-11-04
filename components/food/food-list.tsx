@@ -10,7 +10,7 @@ import FoodEditDialog from './food-edit-dialog';
 import FoodDeleteDialog from './food-delete-dialog';
 import { FoodEntry, FoodEntryCreateOptions } from '../../types';
 
-const serverURL = 'https://my-food-db-backend.herokuapp.com:22276/'
+const serverURL = 'https://my-food-db-backend.herokuapp.com/'
 
 const FoodList = () => {
   const [foods, setFoods] = useState<FoodEntry[]>([]);
