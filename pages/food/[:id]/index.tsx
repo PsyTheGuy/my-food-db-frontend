@@ -30,7 +30,7 @@ const Food = () => {
 
   useEffect(() => {
     const id = router.query[':id'];
-    getFood(id);
+    getFood(id as string);
   },[])
 
   return (
@@ -52,7 +52,7 @@ const Food = () => {
           </Box>
           <Divider />
           <Box sx={{padding: 1,backgroundColor: '#2196f3'}}>
-            <Typography sx={{fontSize: 14}}>Last modified: {food?.createdAt.substring(0,10).replace('-', '.')}.</Typography>
+            <Typography sx={{fontSize: 14}}>Last modified: {String(food?.createdAt).substring(0,10).replace('-', '.')}.</Typography>
           </Box>
         </Box>
       </Card>

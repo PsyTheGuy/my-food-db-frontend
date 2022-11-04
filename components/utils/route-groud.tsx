@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 
-function RouteGuard({ children }) {
+function RouteGuard({ children }: { children: any}) {
   const router = useRouter();
   const [authorized, setAuthorized] = useState<Boolean>(false);
 
